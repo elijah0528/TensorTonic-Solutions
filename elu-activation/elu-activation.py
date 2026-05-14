@@ -1,9 +1,7 @@
-import numpy as np
-
+import math
 def elu(x, alpha):
     """
     Apply ELU activation to each element.
     """
     # Write code here
-    x = np.array(x)
-    return np.where(x > 0, x, alpha * (np.exp(x) - 1)).tolist()
+    return [i if i > 0 else alpha * (math.exp(i) - 1) for i in x]
